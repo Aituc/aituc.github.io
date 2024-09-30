@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JoerAI Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: black;
+            color: blue; 
+        }
+        #chat-container {
+            border: 2px solid blue;
+            padding: 10px;
+            height: 300px;
+            width: 99%;
+            overflow-y: scroll;
+            position: left;
+            color: blue;
+        }
+        #user-input {
+            width: 100%;
+            padding: 7px;
+            margin-top: 10px;
+            margin-right: 5px;
+            border: 2px solid blue;
+            color: black;
+        }
+        .run {
+           margin-top: 10px;
+           padding: 5px;
+           background-color: white;
+           color: black; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="chat-container"></div>
+
+    <input type="text" id="user-input" placeholder="Type your message here..." onkeypress="handleKeyPress(event)">
+<center>
+<button class="run" onclick="handleUserInput()"><strong> Send </strong></button>
+<br>
+<br>
+<p>You can click the "send" button or press "Enter" key</p>
+</center>
+   <script src="respond.js"></script>
+ <script>
+
+const chatContainer = document.getElementById('chat-container');
+const userInput = document.getElementById('user-input');
+function addMessage(sender, message) {
+    const messageElement = document.createElement('p');
+    messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+    chatContainer.appendChild(messageElement);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+}
+
+function getAIResponse(userMessage) {
+    const lowercaseMessage = userMessage.toLowerCase();
+    for (const key in aiResponses) {
+        if (lowercaseMessage.includes(key)) {
+            return aiResponses[key];
+        }
+    }
+    return aiResponses["0"];
+}
+
+function handleUserInput() {
+    const userMessage = userInput.value.trim();
+    if (userMessage) {
+        addMessage("You", userMessage);
+        const aiResponse = getAIResponse(userMessage);
+        setTimeout(() => addMessage("JoerAI", aiResponse), 500);
+        userInput.value = "";
+    }
+}
+
+function handleKeyPress(event) {
+    if (event.key === "Enter") {
+        handleUserInput();
+    }
+}
+
+</script>
+</body>
+</html>
