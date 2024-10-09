@@ -1,17 +1,168 @@
+
 <!DOCTYPE html>
 <html lang="en">
+<body>
+    <div class="container">
+       
+
+    </div>
+<center>
+<br>
+<br>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search new music by category (ex. rock, dance, metal, rap)">
+        <button id="searchButton">Search</button>
+    </div>
+
+    <div id="searchResults" class="search-results"></div>
+</center>
+<script src="data.js"></script>
+    <script> 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const searchButton = document.getElementById('searchButton');
+    searchButton.addEventListener('click', performSearch);
+
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+});
+
+function performSearch() {
+    const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    const searchResults = document.getElementById("searchResults");
+
+    const filteredData = data.filter(item => 
+        item.category.toLowerCase().includes(searchInput)
+    );
+
+    displayResults(filteredData);
+}
+
+function displayResults(results) {
+    const searchResults = document.getElementById("searchResults");
+    searchResults.innerHTML = "";
+    searchResults.style.display = "block";
+
+    const closeBtn = document.createElement("span");
+    closeBtn.innerHTML = "&times;";
+    closeBtn.className = "close-btn";
+    closeBtn.onclick = () => searchResults.style.display = "none";
+    searchResults.appendChild(closeBtn);
+
+    const heading = document.createElement("h2");
+    heading.textContent = "Search Results";
+    searchResults.appendChild(heading);
+
+    if (results.length === 0) {
+        const noResults = document.createElement("p");
+        noResults.textContent = "No results found.";
+        searchResults.appendChild(noResults);
+    } else {
+        const ul = document.createElement("ul");
+        results.forEach(item => {
+            const li = document.createElement("li");
+            
+            const songInfo = document.createElement("div");
+            songInfo.className = "song-info";
+            songInfo.textContent = `${item.name} by ${item.artist}  (${item.category})`;
+            li.appendChild(songInfo);
+
+            const audio = document.createElement("audio");
+            audio.controls = true;
+            const source = document.createElement("source");
+            source.src = item.audio;
+            source.type = "audio/mpeg";
+            audio.appendChild(source);
+            li.appendChild(audio);
+
+            ul.appendChild(li);
+        });
+        searchResults.appendChild(ul);
+    }
+}
+
+</script>
+
+
 <head>
 <title>New Songs</title>
 </head>
 <style>
+.container {
+    padding: 20px;
+
+}
+
+.search-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+#searchInput {
+    padding: 5px;
+    width: 500px;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.search-results {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Fully opaque white background */
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1001; /* Ensure it's above other content */
+}
+
+.search-results h2 {
+    margin-top: 0;
+}
+
+.search-results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.search-results li {
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.song-info {
+    margin-bottom: 5px;
+}
+
+audio {
+    width: 100%;
+    max-width: 300px;
+}
 body {
 background-image: linear-gradient(90deg, blue, red);
 }
-div {
-background-color: green;
-height: 10%;
-width: 100%;
-}
+
 </style>
 <body>
     <center>
@@ -21,31 +172,107 @@ width: 100%;
 <br>
 <h4>Fading Lights</h4>
     <audio controls>
-        <source src="DJJR - Fading Lights.mp3" type="audio/mpeg">
+        <source src="DJJR  - Fading Lights.wav" type="audio/wav">
 Your browser does not support the audio element.
     </audio>
 <br>
 <br>
 <h4>Calling Out</h4>
     <audio controls>
-        <source src="DJJR - Calling Out.mp3" type="audio/mpeg">
+        <source src="DJJR - Calling Out.wav" type="audio/wav">
 Your browser does not support the audio element.
     </audio>
 <br>
 <br>
 <h4>Falling Apart</h4>
     <audio controls>
-        <source src="DJJR - Falling apart.mp3" type="audio/mpeg">
+        <source src="DJJR - Falling apart.wav" type="audio/wav">
 Your browser does not support the audio element.
     </audio>
-        <br>
+<br>
 <br>
 <h4>Fading Flame</h4>
     <audio controls>
-        <source src="DJJR - Fading flame.mp3" type="audio/mpeg">
+        <source src="DJJR - Fading Flame.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
     </audio>
-<div></div>
+<br>
+<br>
+<h4>The end is Near</h4>
+    <audio controls>
+        <source src="DJJR - The End Is Near.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+    </audio>
+<br>
+<br>
+<h4>Realm of Decay</h4>
+    <audio controls>
+        <source src="DJJR - Realm of Decay.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+    </audio>
+<br>
+<br>
+<h4>Dancing in the dark</h4>
+    <audio controls>
+        <source src="DJJR - Dancing in the dark.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+    </audio>
+<br>
+<br>
+<h4>Hollow Throne</h4>
+    <audio controls>
+        <source src="DJJR - Hollow Throne.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+    </audio>
+<br>
+<br>
+<h4>Reaper's Call</h4>
+    <audio controls>
+        <source src="DJJR - Reaper's Call.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+    </audio>
+<br>
+<br>
+<h4>Dancing With Ghosts</h4>
+    <audio controls>
+        <source src="DJJR - Dancing With Ghosts.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+    </audio>
+<br>
+<br>
+<h4>Can't let go</h4>
+    <audio controls>
+        <source src="DJJR - Can't let go.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+    </audio>
+<br>
+<br>
+<h4>Break the Silence</h4>
+    <audio controls>
+        <source src="DJJR - Break the Silence.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+    </audio>
+<br>
+<br>
+<h4>Trapped in the Sea</h4>
+    <audio controls>
+        <source src="DJJR - Trapped in the Sea.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+    </audio>
+<br>
+<br>
+<h4>No Way Back Home</h4>
+    <audio controls>
+        <source src="DJJR - No Way Back Home.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+    </audio>
+<br>
+<br>
+<h4>Echoes of You</h4>
+    <audio controls>
+        <source src="DJJR - Echoes of You (instrumental).mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+    </audio>
 <center>
 </body>
 </html>
