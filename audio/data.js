@@ -2,20 +2,6 @@ const data = [
     { name: "No Way Back Home", artist: "DJJR", category: "dance", audio: "DJJR - No Way Back Home.mp3" },
     { name: "No Way Back Home", artist: "DJJR", category: "sad", audio: "DJJR - No Way Back Home.mp3" },
 
-    { name: "Trapped in the Sea", artist: "DJJR", category: "nu-metal", audio: "DJJR - Trapped in the Sea.mp3" },
-    { name: "Trapped in the Sea", artist: "DJJR", category: "numetal", audio: "DJJR - Trapped in the Sea.mp3" },
-    { name: "Trapped in the Sea", artist: "DJJR", category: "nu metal", audio: "DJJR - Trapped in the Sea.mp3" },
-    { name: "Trapped in the Sea", artist: "DJJR", category: "rap", audio: "DJJR - Trapped in the Sea.mp3" },
-    { name: "Trapped in the Sea", artist: "DJJR", category: "rock", audio: "DJJR - Trapped in the Sea.mp3" },
-    { name: "Trapped in the Sea", artist: "DJJR", category: "hard rock", audio: "DJJR - Trapped in the Sea.mp3" },
-
-    { name: "Break the Silence", artist: "DJJR", category: "nu-metal", audio: "DJJR - Break the Silence.mp3" },
-    { name: "Break the Silence", artist: "DJJR", category: "numetal", audio: "DJJR - Break the Silence.mp3" },
-    { name: "Break the Silence", artist: "DJJR", category: "nu metal", audio: "DJJR - Break the Silence.mp3" },
-    { name: "Break the Silence", artist: "DJJR", category: "rap", audio: "DJJR - Break the Silence.mp3" },
-    { name: "Break the Silence", artist: "DJJR", category: "rock", audio: "DJJR - Break the Silence.mp3" },
-    { name: "Break the Silence", artist: "DJJR", category: "hard rock", audio: "DJJR - Break the Silence.mp3" },
-
     { name: "Can't let go", artist: "DJJR", category: "sad", audio: "DJJR - Can't let go.mp3" },
     { name: "Can't let go", artist: "DJJR", category: "dance", audio: "DJJR - Can't let go.mp3" },
 
@@ -42,10 +28,19 @@ const data = [
     { name: "The End Is Near", artist: "DJJR", category: "alternative rock", audio: "DJJR - The End Is Near.mp3" },
     { name: "The End Is Near", artist: "DJJR", category: "sad", audio: "DJJR - The End Is Near.mp3" },
 
-    { name: "The End Is Near", artist: "DJJR", category: "rock", audio: "DJJR - Fading Flame.mp3" },
-    { name: "The End Is Near", artist: "DJJR", category: "hard rock", audio: "DJJR - Fading Flame.mp3" },
-    { name: "The End Is Near", artist: "DJJR", category: "alternative rock", audio: "DJJR - Fading Flame.mp3" },
-    { name: "The End Is Near", artist: "DJJR", category: "sad", audio: "DJJR - Fading Flame.mp3" },
+    { name: "Trapped in the Sea", artist: "DJJR", category: "nu-metal", audio: "DJJR - Trapped in the Sea.mp3" },
+    { name: "Trapped in the Sea", artist: "DJJR", category: "numetal", audio: "DJJR - Trapped in the Sea.mp3" },
+    { name: "Trapped in the Sea", artist: "DJJR", category: "nu metal", audio: "DJJR - Trapped in the Sea.mp3" },
+    { name: "Trapped in the Sea", artist: "DJJR", category: "rap", audio: "DJJR - Trapped in the Sea.mp3" },
+    { name: "Trapped in the Sea", artist: "DJJR", category: "rock", audio: "DJJR - Trapped in the Sea.mp3" },
+    { name: "Trapped in the Sea", artist: "DJJR", category: "hard rock", audio: "DJJR - Trapped in the Sea.mp3" },
+
+    { name: "Break the Silence", artist: "DJJR", category: "nu-metal", audio: "DJJR - Break the Silence.mp3" },
+    { name: "Break the Silence", artist: "DJJR", category: "numetal", audio: "DJJR - Break the Silence.mp3" },
+    { name: "Break the Silence", artist: "DJJR", category: "nu metal", audio: "DJJR - Break the Silence.mp3" },
+    { name: "Break the Silence", artist: "DJJR", category: "rap", audio: "DJJR - Break the Silence.mp3" },
+    { name: "Break the Silence", artist: "DJJR", category: "rock", audio: "DJJR - Break the Silence.mp3" },
+    { name: "Break the Silence", artist: "DJJR", category: "hard rock", audio: "DJJR - Break the Silence.mp3" },
 
     { name: "The End Is Near", artist: "DJJR", category: "Q", audio: "DJJR - The End Is Near.mp3" },
 ];
