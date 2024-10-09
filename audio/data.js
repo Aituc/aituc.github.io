@@ -42,5 +42,5 @@ const data = [
     { name: "Break the Silence", artist: "DJJR", category: "rock", audio: "DJJR - Break the Silence.mp3" },
     { name: "Break the Silence", artist: "DJJR", category: "hard rock", audio: "DJJR - Break the Silence.mp3" },
 
-    { name: "The End Is Near", artist: "DJJR", category: "Q", audio: "DJJR - The End Is Near.mp3" },
+   
 ];
