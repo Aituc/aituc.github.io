@@ -17,15 +17,8 @@
 </center>
 <script src="data.js"></script>
     <script> 
-document.addEventListener('DOMContentLoaded', () => {
-    const searchButton = document.getElementById('searchButton');
-    searchButton.addEventListener('click', performSearch);
 
-    const searchInput = document.getElementById('searchInput');
-    searchInput.addEventListener('input', handleInput);
-});
-
-function handleInput(event) {
+        function handleInput(event) {
     const specialChars = [',', '.', '!', '?', ';', ':'];
     const lastChar = event.target.value.slice(-1);
 
@@ -35,6 +28,15 @@ function handleInput(event) {
         performSearch();
     }
 }
+        
+document.addEventListener('DOMContentLoaded', () => {
+    const searchButton = document.getElementById('searchButton');
+    searchButton.addEventListener('click', performSearch);
+
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', handleInput);
+});
+
 
 function performSearch() {
     const searchInput = document.getElementById("searchInput").value.toLowerCase();
