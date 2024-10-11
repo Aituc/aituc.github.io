@@ -13,6 +13,10 @@
             padding: 0;
             color: white;
         }
+span {
+color: red;
+font-size: 50000px;
+}
         .container {
             padding: 20px;
         }
@@ -22,7 +26,7 @@
             right: 20px;
             display: flex;
             gap: 10px;
-            z-index: 1000;
+            z-index: 1001;
         }
         #searchInput {
             padding: 5px;
@@ -81,7 +85,7 @@
 <body>
     <div class="container">
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search new music by category (ex. rock, dance, metal, rap)">
+            <input type="text" id="searchInput" placeholder="What do you feel like listening to today? type :help if you have questions ">
             <button id="searchButton">🔍</button>
         </div>
 
@@ -233,7 +237,7 @@
             "cant let go", "dancing in the dark", "dancing with ghosts",
             "fading flame", "hollow throne", "no way back home", "realm of decay",
             "reapers call", "the end is near", "trapped in the sea", "fading lights",
-            "calling out", "falling apart", "echos of you"
+            "calling out", "falling apart", "echos of you", "all", ":help", "backroads and sunsets", "newest"
         ];
 
         function autoCorrect(input) {
@@ -267,12 +271,7 @@
 
             searchResults.innerHTML = "";
 
-            if (correctedInput !== searchInput) {
-                const correctionNotice = document.createElement("p");
-                correctionNotice.textContent = `Showing results for: ${correctedInput}`;
-                correctionNotice.style.fontStyle = "italic";
-                searchResults.appendChild(correctionNotice);
-            }
+
 
             const filteredData = data.filter(item => 
                 item.category.toLowerCase().includes(correctedInput)
@@ -292,16 +291,16 @@
             searchResults.appendChild(closeBtn);
 
             const heading = document.createElement("h2");
-            heading.textContent = `Search Results for: ${searchTerm}`;
+            heading.textContent = `Closest search result: ${searchTerm}`;
             searchResults.appendChild(heading);
 
             const extra = document.createElement("p");
-            extra.textContent = "Searched songs may repeat";
+            extra.innerHTML = ' Searched songs may repeat <br><br><br> ';
             searchResults.appendChild(extra);
 
             if (results.length === 0) {
                 const noResults = document.createElement("p");
-                noResults.innerHTML = 'No results found. <a href="https://forms.gle/21Lu5ZdMGNmnzK2h8">Report a bug?</a>';
+                noResults.innerHTML = 'No results found. <a href="https://forms.gle/21Lu5ZdMGNmnzK2h8/">Report this error?</a>';
                 searchResults.appendChild(noResults);
             } else {
                 const ul = document.createElement("ul");
@@ -326,6 +325,7 @@
                 searchResults.appendChild(ul);
             }
         }
+
     </script>
 </body>
 </html>
