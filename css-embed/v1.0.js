@@ -280,3 +280,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Shadows
     demoContainer.appendChild(createInteractiveSection('Shadows', ['shadow-sm', 'shadow', 'shadow-md', 'shadow-lg', 'shadow-xl', 'shadow-2xl'], 'radio'));
 });
+
+
