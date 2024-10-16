@@ -99,9 +99,9 @@ const data = [  // search element names
     { name: "Falling apart", artist: "DJJR", category: "falling apart", audio: "DJJR - Falling apart.mp3" },
 
     { name: "Backroads and sunsets", artist: "DJJR", category: "new", audio: "Backroads and sunsets.mp3" },
-    { name: "Backroads and sunsets", artist: "DJJR", category: "male singing", audio: "Backroads and sunsets.mp3" },
-    { name: "Backroads and sunsets", artist: "DJJR", category: "country", audio: "Backroads and sunsets.mp3" },
-    { name: "Backroads and sunsets", artist: "DJJR", category: "backroads and sunsets", audio: "Backroads and sunsets.mp3" },
+    { name: "Backroads and sunsets", artist: "DJJR", category: "male singing", audio: "Backroads and Sunsets.mp3" },
+    { name: "Backroads and sunsets", artist: "DJJR", category: "country", audio: "Backroads and Sunsets.mp3" },
+    { name: "Backroads and sunsets", artist: "DJJR", category: "backroads and sunsets", audio: "Backroads and Sunsets.mp3" },
 
     { name: "Feel the vibe", artist: "DJJR", category: "dance", audio: "DJJR - Feel the vibe.mp3" },
     { name: "Feel the vibe", artist: "DJJR", category: "new", audio: "DJJR - Feel the vibe.mp3" },
