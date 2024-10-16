@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Dynamically import CSS
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = 'css.css';
+    link.href = 'main.css';
     document.head.appendChild(link);
 
     const demoContainer = document.getElementById('demo-container');
