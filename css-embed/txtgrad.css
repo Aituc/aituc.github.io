@@ -1,0 +1,89 @@
+/* Gradient Text Colors - All Combinations */
+
+/* Red combinations */
+.tgrad-red-orange { background: linear-gradient(to right, #FF0000, #FFA500); -webkit-background-clip: text; color: transparent; }
+.tgrad-red-yellow { background: linear-gradient(to right, #FF0000, #FFFF00); -webkit-background-clip: text; color: transparent; }
+.tgrad-red-green { background: linear-gradient(to right, #FF0000, #00FF00); -webkit-background-clip: text; color: transparent; }
+.tgrad-red-blue { background: linear-gradient(to right, #FF0000, #0000FF); -webkit-background-clip: text; color: transparent; }
+.tgrad-red-indigo { background: linear-gradient(to right, #FF0000, #4B0082); -webkit-background-clip: text; color: transparent; }
+.tgrad-red-violet { background: linear-gradient(to right, #FF0000, #8F00FF); -webkit-background-clip: text; color: transparent; }
+.tgrad-red-purple { background: linear-gradient(to right, #FF0000, #800080); -webkit-background-clip: text; color: transparent; }
+.tgrad-red-white { background: linear-gradient(to right, #FF0000, #FFFFFF); -webkit-background-clip: text; color: transparent; }
+.tgrad-red-black { background: linear-gradient(to right, #FF0000, #000000); -webkit-background-clip: text; color: transparent; }
+.tgrad-red-gray { background: linear-gradient(to right, #FF0000, #808080); -webkit-background-clip: text; color: transparent; }
+.tgrad-red-brown { background: linear-gradient(to right, #FF0000, #8B4513); -webkit-background-clip: text; color: transparent; }
+
+/* Orange combinations */
+.tgrad-orange-yellow { background: linear-gradient(to right, #FFA500, #FFFF00); -webkit-background-clip: text; color: transparent; }
+.tgrad-orange-green { background: linear-gradient(to right, #FFA500, #00FF00); -webkit-background-clip: text; color: transparent; }
+.tgrad-orange-blue { background: linear-gradient(to right, #FFA500, #0000FF); -webkit-background-clip: text; color: transparent; }
+.tgrad-orange-indigo { background: linear-gradient(to right, #FFA500, #4B0082); -webkit-background-clip: text; color: transparent; }
+.tgrad-orange-violet { background: linear-gradient(to right, #FFA500, #8F00FF); -webkit-background-clip: text; color: transparent; }
+.tgrad-orange-purple { background: linear-gradient(to right, #FFA500, #800080); -webkit-background-clip: text; color: transparent; }
+.tgrad-orange-white { background: linear-gradient(to right, #FFA500, #FFFFFF); -webkit-background-clip: text; color: transparent; }
+.tgrad-orange-black { background: linear-gradient(to right, #FFA500, #000000); -webkit-background-clip: text; color: transparent; }
+.tgrad-orange-gray { background: linear-gradient(to right, #FFA500, #808080); -webkit-background-clip: text; color: transparent; }
+.tgrad-orange-brown { background: linear-gradient(to right, #FFA500, #8B4513); -webkit-background-clip: text; color: transparent; }
+
+/* Yellow combinations */
+.tgrad-yellow-green { background: linear-gradient(to right, #FFFF00, #00FF00); -webkit-background-clip: text; color: transparent; }
+.tgrad-yellow-blue { background: linear-gradient(to right, #FFFF00, #0000FF); -webkit-background-clip: text; color: transparent; }
+.tgrad-yellow-indigo { background: linear-gradient(to right, #FFFF00, #4B0082); -webkit-background-clip: text; color: transparent; }
+.tgrad-yellow-violet { background: linear-gradient(to right, #FFFF00, #8F00FF); -webkit-background-clip: text; color: transparent; }
+.tgrad-yellow-purple { background: linear-gradient(to right, #FFFF00, #800080); -webkit-background-clip: text; color: transparent; }
+.tgrad-yellow-white { background: linear-gradient(to right, #FFFF00, #FFFFFF); -webkit-background-clip: text; color: transparent; }
+.tgrad-yellow-black { background: linear-gradient(to right, #FFFF00, #000000); -webkit-background-clip: text; color: transparent; }
+.tgrad-yellow-gray { background: linear-gradient(to right, #FFFF00, #808080); -webkit-background-clip: text; color: transparent; }
+.tgrad-yellow-brown { background: linear-gradient(to right, #FFFF00, #8B4513); -webkit-background-clip: text; color: transparent; }
+
+/* Green combinations */
+.tgrad-green-blue { background: linear-gradient(to right, #00FF00, #0000FF); -webkit-background-clip: text; color: transparent; }
+.tgrad-green-indigo { background: linear-gradient(to right, #00FF00, #4B0082); -webkit-background-clip: text; color: transparent; }
+.tgrad-green-violet { background: linear-gradient(to right, #00FF00, #8F00FF); -webkit-background-clip: text; color: transparent; }
+.tgrad-green-purple { background: linear-gradient(to right, #00FF00, #800080); -webkit-background-clip: text; color: transparent; }
+.tgrad-green-white { background: linear-gradient(to right, #00FF00, #FFFFFF); -webkit-background-clip: text; color: transparent; }
+.tgrad-green-black { background: linear-gradient(to right, #00FF00, #000000); -webkit-background-clip: text; color: transparent; }
+.tgrad-green-gray { background: linear-gradient(to right, #00FF00, #808080); -webkit-background-clip: text; color: transparent; }
+.tgrad-green-brown { background: linear-gradient(to right, #00FF00, #8B4513); -webkit-background-clip: text; color: transparent; }
+
+/* Blue combinations */
+.tgrad-blue-indigo { background: linear-gradient(to right, #0000FF, #4B0082); -webkit-background-clip: text; color: transparent; }
+.tgrad-blue-violet { background: linear-gradient(to right, #0000FF, #8F00FF); -webkit-background-clip: text; color: transparent; }
+.tgrad-blue-purple { background: linear-gradient(to right, #0000FF, #800080); -webkit-background-clip: text; color: transparent; }
+.tgrad-blue-white { background: linear-gradient(to right, #0000FF, #FFFFFF); -webkit-background-clip: text; color: transparent; }
+.tgrad-blue-black { background: linear-gradient(to right, #0000FF, #000000); -webkit-background-clip: text; color: transparent; }
+.tgrad-blue-gray { background: linear-gradient(to right, #0000FF, #808080); -webkit-background-clip: text; color: transparent; }
+.tgrad-blue-brown { background: linear-gradient(to right, #0000FF, #8B4513); -webkit-background-clip: text; color: transparent; }
+
+/* Indigo combinations */
+.tgrad-indigo-violet { background: linear-gradient(to right, #4B0082, #8F00FF); -webkit-background-clip: text; color: transparent; }
+.tgrad-indigo-purple { background: linear-gradient(to right, #4B0082, #800080); -webkit-background-clip: text; color: transparent; }
+.tgrad-indigo-white { background: linear-gradient(to right, #4B0082, #FFFFFF); -webkit-background-clip: text; color: transparent; }
+.tgrad-indigo-black { background: linear-gradient(to right, #4B0082, #000000); -webkit-background-clip: text; color: transparent; }
+.tgrad-indigo-gray { background: linear-gradient(to right, #4B0082, #808080); -webkit-background-clip: text; color: transparent; }
+.tgrad-indigo-brown { background: linear-gradient(to right, #4B0082, #8B4513); -webkit-background-clip: text; color: transparent; }
+
+/* Violet combinations */
+.tgrad-violet-purple { background: linear-gradient(to right, #8F00FF, #800080); -webkit-background-clip: text; color: transparent; }
+.tgrad-violet-white { background: linear-gradient(to right, #8F00FF, #FFFFFF); -webkit-background-clip: text; color: transparent; }
+.tgrad-violet-black { background: linear-gradient(to right, #8F00FF, #000000); -webkit-background-clip: text; color: transparent; }
+.tgrad-violet-gray { background: linear-gradient(to right, #8F00FF, #808080); -webkit-background-clip: text; color: transparent; }
+.tgrad-violet-brown { background: linear-gradient(to right, #8F00FF, #8B4513); -webkit-background-clip: text; color: transparent; }
+
+/* Purple combinations */
+.tgrad-purple-white { background: linear-gradient(to right, #800080, #FFFFFF); -webkit-background-clip: text; color: transparent; }
+.tgrad-purple-black { background: linear-gradient(to right, #800080, #000000); -webkit-background-clip: text; color: transparent; }
+.tgrad-purple-gray { background: linear-gradient(to right, #800080, #808080); -webkit-background-clip: text; color: transparent; }
+.tgrad-purple-brown { background: linear-gradient(to right, #800080, #8B4513); -webkit-background-clip: text; color: transparent; }
+
+/* White combinations */
+.tgrad-white-black { background: linear-gradient(to right, #FFFFFF, #000000); -webkit-background-clip: text; color: transparent; }
+.tgrad-white-gray { background: linear-gradient(to right, #FFFFFF, #808080); -webkit-background-clip: text; color: transparent; }
+.tgrad-white-brown { background: linear-gradient(to right, #FFFFFF, #8B4513); -webkit-background-clip: text; color: transparent; }
+
+/* Black combinations */
+.tgrad-black-gray { background: linear-gradient(to right, #000000, #808080); -webkit-background-clip: text; color: transparent; }
+.tgrad-black-brown { background: linear-gradient(to right, #000000, #8B4513); -webkit-background-clip: text; color: transparent; }
+
+/* Gray combinations */
+.tgrad-gray-brown { background: linear-gradient(to right, #808080, #8B4513); -webkit-background-clip: text; color: transparent; }
