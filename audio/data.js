@@ -1,6 +1,13 @@
 const data = [  // search element names
     { name: "To search, type: title, music type, singers gender and all (to get every song)", artist: "help", category: ":help" }, // if :help is typed
 
+    { name: "Feel the vibe", artist: "DJJR", category: "dance", audio: "DJJR - Feel the vibe.mp3" },
+    { name: "Feel the vibe", artist: "DJJR", category: "new", audio: "DJJR - Feel the vibe.mp3" },
+    { name: "Feel the vibe", artist: "DJJR", category: "upbeat", audio: "DJJR - Feel the vibe.mp3" },
+    { name: "Feel the vibe", artist: "DJJR", category: "male singing", audio: "DJJR - Feel the vibe.mp3" },
+    { name: "Feel the vibe", artist: "DJJR", category: "all", audio: "DJJR - Feel the vibe.mp3" },
+    { name: "Feel the vibe", artist: "DJJR", category: "feel the vibe", audio: "DJJR - Feel the vibe.mp3" },
+    
     { name: "No Way Back Home", artist: "DJJR", category: "dance", audio: "DJJR - No Way Back Home.mp3" },
     { name: "No Way Back Home", artist: "DJJR", category: "sad", audio: "DJJR - No Way Back Home.mp3" },
     { name: "No Way Back Home", artist: "DJJR", category: "no way back home", audio: "DJJR - No Way Back Home.mp3" },
@@ -102,12 +109,4 @@ const data = [  // search element names
     { name: "Backroads and sunsets", artist: "DJJR", category: "male singing", audio: "Backroads and Sunsets.mp3" },
     { name: "Backroads and sunsets", artist: "DJJR", category: "country", audio: "Backroads and Sunsets.mp3" },
     { name: "Backroads and sunsets", artist: "DJJR", category: "backroads and sunsets", audio: "Backroads and Sunsets.mp3" },
-
-    { name: "Feel the vibe", artist: "DJJR", category: "dance", audio: "DJJR - Feel the vibe.mp3" },
-    { name: "Feel the vibe", artist: "DJJR", category: "new", audio: "DJJR - Feel the vibe.mp3" },
-    { name: "Feel the vibe", artist: "DJJR", category: "upbeat", audio: "DJJR - Feel the vibe.mp3" },
-    { name: "Feel the vibe", artist: "DJJR", category: "male singing", audio: "DJJR - Feel the vibe.mp3" },
-    { name: "Feel the vibe", artist: "DJJR", category: "all", audio: "DJJR - Feel the vibe.mp3" },
-    { name: "Feel the vibe", artist: "DJJR", category: "feel the vibe", audio: "DJJR - Feel the vibe.mp3" },
-    
    ];
