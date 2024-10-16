@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Dynamically import CSS
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = 'https://aituc.github.io/css-embed/main.css';
+    link.href = 'css.css';
     document.head.appendChild(link);
 
     const demoContainer = document.getElementById('demo-container');
@@ -282,3 +282,55 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// Define color combinations for gradients
+const colors = ['r', 'o', 'y', 'g', 'b', 'i', 'v', 'p', 'w', 'black', 'grey', 'brown'];
+
+// Generate text gradient classes
+const textGradientClasses = [];
+for (let i = 0; i < colors.length; i++) {
+    for (let j = i + 1; j < colors.length; j++) {
+        textGradientClasses.push(`tgrad-${colors[i]}-${colors[j]}`);
+    }
+}
+
+// Function to create gradient text demo section
+function createGradientTextSection(title, classes) {
+    const section = document.createElement('div');
+    section.className = 'mar-4';
+    
+    const heading = document.createElement('h2');
+    heading.textContent = title;
+    heading.className = 'h2 tblue bold';
+    section.appendChild(heading);
+
+    const textContainer = document.createElement('div');
+    textContainer.className = 'flex flex-wrap';
+
+    classes.forEach(cls => {
+        const textElement = document.createElement('div');
+        textElement.className = `text-xl bold mar-2 pad-2 ${cls}`;
+        textElement.textContent = 'Gradient Text';
+
+        const label = document.createElement('div');
+        label.textContent = cls;
+        label.className = 'text-sm text-center';
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'flex flex-col items-center mar-2';
+        wrapper.appendChild(textElement);
+        wrapper.appendChild(label);
+
+        textContainer.appendChild(wrapper);
+    });
+
+    section.appendChild(textContainer);
+    return section;
+}
+
+// Add the gradient text demo section to the page
+document.addEventListener('DOMContentLoaded', function() {
+    const demoContainer = document.getElementById('demo-container');
+    if (demoContainer) {
+        demoContainer.appendChild(createGradientTextSection('Text Gradients', textGradientClasses));
+    }
+});
