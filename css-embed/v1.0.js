@@ -22,6 +22,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function applyFlexClasses(element) {
+        if (element.classList.contains('flex')) {
+            element.style.display = 'flex';
+        }
+        if (element.classList.contains('flex-col')) {
+            element.style.flexDirection = 'column';
+        }
+        if (element.classList.contains('items-center')) {
+            element.style.alignItems = 'center';
+        }
+        if (element.classList.contains('justify-center')) {
+            element.style.justifyContent = 'center';
+        }
+        if (element.classList.contains('content-center')) {
+            element.style.alignContent = 'center';
+        }
+    }
+
     function createInteractiveSection(title, classes, type = 'toggle') {
         const section = document.createElement('div');
         section.className = 'mar-4';
@@ -47,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 button.onclick = () => {
                     demoElement.classList.toggle(cls);
                     applyCustomSizeClasses(demoElement);
+                    applyFlexClasses(demoElement);
                 };
                 controlsDiv.appendChild(button);
             } else if (type === 'radio') {
@@ -60,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     classes.forEach(c => demoElement.classList.remove(c));
                     demoElement.classList.add(cls);
                     applyCustomSizeClasses(demoElement);
+                    applyFlexClasses(demoElement);
                 };
                 label.appendChild(radio);
                 label.appendChild(document.createTextNode(cls));
@@ -203,6 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Padding
     demoContainer.appendChild(createInteractiveSection('Padding', ['pad-1', 'pad-2', 'pad-3', 'pad-4']));
+
     // Margin
     demoContainer.appendChild(createInteractiveSection('Margin', ['mar-1', 'mar-2', 'mar-3', 'mar-4']));
 
@@ -228,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
     demoContainer.appendChild(createInteractiveSection('Background Colors', ['bg-white', 'bg-black', 'bg-gray', 'bg-grey', 'bg-red', 'bg-blue', 'bg-orange', 'bg-yellow', 'bg-green', 'bg-purple', 'bg-violet'], 'radio'));
 
     // Flexbox
-    demoContainer.appendChild(createInteractiveSection('Flexbox', ['flex', 'flex-col', 'items-center', 'justify-center']));
+    demoContainer.appendChild(createInteractiveSection('Flexbox', ['flex', 'flex-col', 'items-center', 'justify-center', 'content-center']));
 
     // Display
     demoContainer.appendChild(createInteractiveSection('Display', ['view-none', 'show-none', 'display-none']));
@@ -279,8 +300,67 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Shadows
     demoContainer.appendChild(createInteractiveSection('Shadows', ['shadow-sm', 'shadow', 'shadow-md', 'shadow-lg', 'shadow-xl', 'shadow-2xl'], 'radio'));
-});
 
+    // Custom Rounded Corners
+    function createCustomRoundedClasses() {
+        const sizes = [1, 2, 3, 4, 5, 10, 15, 20, 25, 30, 40, 50];
+        const units = ['px', 'vh', 'vw'];
+        const roundedClasses = [];
+        sizes.forEach(size => {
+            units.forEach(unit => {
+                roundedClasses.push(`round-${size}${unit}`);
+            });
+        });
+        return roundedClasses;
+    }
+
+    // Function to apply custom rounded classes
+    function applyCustomRoundedClass(element, className) {
+        const match = className.match(/round-(\d+)(px|vh|vw)/);
+        if (match) {
+            const [, size, unit] = match;
+            element.style.borderRadius = `${size}${unit}`;
+        }
+    }
+
+    // Function to create rounded demo section
+    function createRoundedDemoSection(title, classes) {
+        const section = document.createElement('div');
+        section.className = 'mar-4';
+        
+        const heading = document.createElement('h2');
+        heading.textContent = title;
+        heading.className = 'h2 tblue bold';
+        section.appendChild(heading);
+
+        const demoContainer = document.createElement('div');
+        demoContainer.className = 'flex flex-wrap';
+
+        classes.forEach(cls => {
+            const demoElement = document.createElement('div');
+            demoElement.className = `w-40 h-40 mar-2 bg-blue ${cls}`;
+            applyCustomRoundedClass(demoElement, cls);
+
+            const label = document.createElement('div');
+            label.textContent = cls;
+            label.className = 'text-sm text-center mar-t-1';
+
+            const wrapper = document.createElement('div');
+            wrapper.className = 'flex flex-col items-center mar-2';
+            wrapper.appendChild(demoElement);
+            wrapper.appendChild(label);
+
+            demoContainer.appendChild(wrapper);
+        });
+
+        section.appendChild(demoContainer);
+        return section;
+    }
+
+    // Add the rounded demo section to the page
+    const roundedClasses = createCustomRoundedClasses();
+    demoContainer.appendChild(createRoundedDemoSection('Custom Rounded Corners', roundedClasses));
+});
 
 // Define color combinations for gradients
 const colors = ['r', 'o', 'y', 'g', 'b', 'i', 'v', 'p', 'w', 'black', 'grey', 'brown'];
@@ -334,3 +414,4 @@ document.addEventListener('DOMContentLoaded', function() {
         demoContainer.appendChild(createGradientTextSection('Text Gradients', textGradientClasses));
     }
 });
+
