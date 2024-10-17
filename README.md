@@ -1,4 +1,4 @@
-# CatCSS Documentation
+# CatCSS
 
 ## Introduction
 
