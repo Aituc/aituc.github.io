@@ -15,7 +15,7 @@ CatCSS is a lightweight, utility-first CSS framework designed to streamline web 
 
 ## Installation
 
-To use CatCSS in your project, include the following files:
+To use CatCSS in your project, import the following file:
 
 ```html
 <script src="https://aituc.github.io/css-embed/v1.0.js"></script>
